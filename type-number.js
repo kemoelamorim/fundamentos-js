@@ -21,7 +21,7 @@ console.log(divisao)
 const alura = 'alura'
 console.log(alura * segundoNumero)
 
-// constante PI
+ // Math.PI retorna o numero de PI e toFixed() que recebe os paramentros das casas decimais 
 console.log(Math.PI.toFixed(2))
 
 // Infinity
@@ -33,3 +33,13 @@ console.log(a/b)
 var a = 0
 var b = 0
 console.log(a/b) 
+
+// funcao que retorta numeros arredondados
+ganhoProHora = (salario, horasTrabalhadas) => {
+    ganhoProHoraTrabalhada = salario / horasTrabalhadas
+    const formatado = ganhoProHoraTrabalhada.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    return formatado;
+    //return Math.round(ganhoProHoraTrabalhada);
+}
+
+console.log(ganhoProHora(1164, 180))
